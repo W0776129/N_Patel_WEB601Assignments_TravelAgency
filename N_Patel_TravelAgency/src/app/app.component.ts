@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import{Tour} from 'src/app/helper-files/tour-interface';
+import { Tour } from './helper-files/tour-interface';
 
 
 @Component({
