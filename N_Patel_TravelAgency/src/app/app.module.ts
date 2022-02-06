@@ -3,11 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
+import { YPipe } from './y.pipe';
+import { YDirective } from './y.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent
+    CardComponent,
+    YPipe,
+    YDirective
   ],
   imports: [
     BrowserModule
