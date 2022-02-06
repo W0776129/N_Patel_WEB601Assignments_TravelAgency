@@ -1,0 +1,30 @@
+:host{
+    
+    .card{
+    border: 1px solid black;
+    width: 400px;
+   
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    }
+    .title{
+        font-size: large;
+        color: blueviolet;
+
+    }
+    .price{
+        color: yellowgreen;
+    }
+    img{
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+    }
+}
+:host.is-first{
+    .card{
+    border: 5px solid black ;
+    }
+}

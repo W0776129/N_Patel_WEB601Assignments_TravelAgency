@@ -1,22 +1,9 @@
-<p>card works!</p>
 
-2nd Tour:
-<br>
-Title: {{ India.title }} 
-<br>
-Description: {{ India.description }} 
-<br>
+<div class="card">
+<div class="title">{{ tourItem ? tourItem.title : "" }}</div><br>
+<div class="desc">{{ tourItem ? tourItem.description : "" }}</div><br>
+<div><img [src]="tourItem ? tourItem.imgURL : ''"></div><br>
+<div class="price">CA${{ tourItem ? tourItem.price : "" }}</div><br>
+<!-- <div class="name">{{ tourItem ? tourItem.name : "" }}</div> -->
 
-3rd Tour:
-<br>
-Title: {{ UK.title }} 
-<br>
-Description: {{ UK.description }} 
-<br>
-
-4th Tour:
-<br>
-Title: {{ Thailand.title }} 
-<br>
-Description: {{ Thailand.description }} 
-<br>
+</div>
