@@ -1,10 +1,23 @@
 <h1>{{title}}</h1>
 
 
-<app-card *ngFor = "let item of tourList; index as i; first as isFirst" 
+
+<h2>cultural Tour</h2>
+<app-card *ngFor = "let item of (tourList | typeFilter:'cultural'  ); index as i; first as isFirst" 
 [tourItem] = "item" [class.is-first]="isFirst">
 
 </app-card>
+<h2>Honeymoon Tour</h2>
+<app-card *ngFor = "let item of (tourList | typeFilter:'Honeymoon' ); index as i; first as isFirst" 
+[tourItem] = "item" [class.is-first]="isFirst">
+
+</app-card>
+<h2>without type Tour</h2>
+<app-card *ngFor = "let item of (tourList | typeFilter ); index as i; first as isFirst" 
+[tourItem] = "item" [class.is-first]="isFirst">
+
+</app-card>
+
 <!-- 
 <app-content-card *ngFor="let item of tourList; index as i; last as isLast" [foodItem]="item"
     [class.is-last]="isLast">

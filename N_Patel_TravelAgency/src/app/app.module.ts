@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import { YPipe } from './y.pipe';
 import { YDirective } from './y.directive';
+import { TypeFilterPipe } from './type-filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     YPipe,
-    YDirective
+    YDirective,
+    TypeFilterPipe
   ],
   imports: [
     BrowserModule

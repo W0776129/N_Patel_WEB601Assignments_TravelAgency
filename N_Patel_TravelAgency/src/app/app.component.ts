@@ -57,7 +57,7 @@ export class AppComponent {
       price:1250
     },
     {
-      id:5,
+      id:6,
       title:'Rome',
       description:'4 days 3 night, Breakfast Included.',
       imgURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/1200px-Colosseo_2020.jpg',
@@ -65,7 +65,7 @@ export class AppComponent {
       type: "cultural"
     },
     {
-      id:5,
+      id:7,
       title:'London',
       description:'4 days 3 night, Breakfast Included.',
       imgURL: 'https://www.history.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTYyNDg1MjE3MTI1Mjc5Mzk4/topic-london-gettyimages-760251843-promo.jpg',
