@@ -8,7 +8,11 @@ import { Tour } from './helper-files/tour-interface';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  
+  //This parameter used for updatepage funcion
+  temp = false;
+  itsAvailable = "";
+  itsNotAvailable = "";
+
   title = 'Patel Travel';
   tourList: Tour[];
   constructor(){
@@ -91,5 +95,27 @@ export class AppComponent {
   //   console.log(tour.title);
   //   return tour.title;
   // }
+
+  updatePage(cardNameOnTheTypescriptSide: string): void {
+    
+   
+    this.tourList.forEach(t => {
+      if (t.title == cardNameOnTheTypescriptSide ){
+        this.temp = true;
+      }
+    });
+    if(this.temp){
+      cardNameOnTheTypescriptSide = cardNameOnTheTypescriptSide+" is available in list.";
+      this.itsAvailable = cardNameOnTheTypescriptSide;
+      this.itsNotAvailable = "";
+
+    }else{
+      cardNameOnTheTypescriptSide = cardNameOnTheTypescriptSide+" is not available in list.";
+      this.itsNotAvailable = cardNameOnTheTypescriptSide;
+      this.itsAvailable = "";
+    }
+    this.temp = false;
+    
+  }
   
 }
