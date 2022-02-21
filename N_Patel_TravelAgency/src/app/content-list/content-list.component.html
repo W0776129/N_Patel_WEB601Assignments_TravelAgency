@@ -1,0 +1,26 @@
+<h1>{{title}}</h1>
+
+<div>
+    <input #titleValue>
+    <button (click)="updatePage(titleValue.value)">Submit</button>
+    <p class="greentext" *ngIf="itsAvailable">{{ itsAvailable }}</p>
+    <p class="redtext" *ngIf="itsNotAvailable">{{ itsNotAvailable }}</p>
+   
+</div>
+
+<h2>cultural Tour</h2>
+<app-card *ngFor = "let item of (tourList | typeFilter:'cultural'  ); index as i" 
+[tourItem] = "item" [class.cultural] = "i+1">
+
+</app-card>
+<h2>Honeymoon Tour</h2>
+<app-card *ngFor = "let item of (tourList | typeFilter:'Honeymoon' ); index as i" 
+[tourItem] = "item" [class.honey]="i+1">
+
+</app-card>
+<h2>without type Tour</h2>
+<app-card *ngFor = "let item of (tourList | typeFilter ); index as i" 
+[tourItem] = "item" >
+
+</app-card>
+

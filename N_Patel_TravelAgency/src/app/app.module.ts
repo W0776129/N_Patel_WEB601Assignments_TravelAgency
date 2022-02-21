@@ -6,6 +6,7 @@ import { CardComponent } from './card/card.component';
 import { YPipe } from './y.pipe';
 import { YDirective } from './y.directive';
 import { TypeFilterPipe } from './type-filter.pipe';
+import { ContentListComponent } from './content-list/content-list.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { TypeFilterPipe } from './type-filter.pipe';
     CardComponent,
     YPipe,
     YDirective,
-    TypeFilterPipe
+    TypeFilterPipe,
+    ContentListComponent
   ],
   imports: [
     BrowserModule
