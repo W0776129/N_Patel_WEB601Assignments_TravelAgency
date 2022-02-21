@@ -5,5 +5,5 @@ export interface Tour{
     price: number;
     imgURL: string;
     type?: string;
-    tags?: Array<string>;
+    tags?: string[];
     }

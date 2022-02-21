@@ -2,8 +2,15 @@
 <div class="card">
 <div class="title">{{ tourItem ? tourItem.title : "" }}</div><br>
 <div class="desc">{{ tourItem ? tourItem.description : "" }}</div><br>
+
 <div><img [src]="tourItem ? tourItem.imgURL : ''"></div><br>
-<div class="price">CA${{ tourItem ? tourItem.price : "" }}</div><br>
+
+
+<div class="price"  >CA${{ tourItem ? tourItem.price : "" }}</div><br>
+<div class="type" appHoverAffect = "underline">{{ tourItem ? tourItem.type : "" }}</div><br>
+<div class="tags" appHoverAffect = "tagbold">{{ tourItem ? tourItem.tags : "" }}</div><br>
+
+
 <!-- <div class="name">{{ tourItem ? tourItem.name : "" }}</div> -->
 
 </div>

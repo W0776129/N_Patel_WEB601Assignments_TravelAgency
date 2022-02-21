@@ -10,8 +10,9 @@ import { Tour } from '../helper-files/tour-interface';
 export class CardComponent implements OnInit {
 @Input() tourItem?: Tour
 
+
   constructor() {
-    
+      
    }
 
   ngOnInit(): void {

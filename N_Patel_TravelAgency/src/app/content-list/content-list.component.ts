@@ -22,14 +22,16 @@ export class ContentListComponent implements OnInit {
       description:'5 days 4 night all including dinner breakfast and lunch.',
       imgURL: 'http://cdn.cnn.com/cnnnext/dam/assets/191212182124-04-singapore-buildings.jpg',
       price:1150,
-      type: "Honeymoon"
+      type: "Honeymoon",
+      tags:['honeymoon','50% discount','Couple Fav']
     },{
       id:1,
       title:'Maldivs',
       description:'4 days 3 night, Breakfast included.',
       imgURL: 'https://www.brides.com/thmb/SpYbYIB3jvpeZR7ErzqhyeE-wKw=/500x350/filters:no_upscale():max_bytes(200000):strip_icc()/SunsetLagoonVillaBirdseyeview-68c2cfd7eb464d2a96dfa02f8696b93f.jpg',
       price:999,
-      type: "Honeymoon"
+      type: "Honeymoon",
+      tags:['honeymoon','30% discount','Couple Fav']
     },
     {
       id:2,
@@ -44,7 +46,8 @@ export class ContentListComponent implements OnInit {
       description:'10 days 10 night, all including dinner breakfast and lunch.',
       imgURL: 'https://i.natgeofe.com/k/42e832f5-fd48-43ff-b338-091bdf4048ca/india-tajmahal_16x9.jpg',
       price:1998,
-      type: "cultural"
+      type: "cultural",
+      tags:['family trip','10% discount','Nature lover']
     },
     {
       id:4,

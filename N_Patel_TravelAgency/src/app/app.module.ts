@@ -7,6 +7,7 @@ import { YPipe } from './y.pipe';
 import { YDirective } from './y.directive';
 import { TypeFilterPipe } from './type-filter.pipe';
 import { ContentListComponent } from './content-list/content-list.component';
+import { HoverAffectDirective } from './hover-affect.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ContentListComponent } from './content-list/content-list.component';
     YPipe,
     YDirective,
     TypeFilterPipe,
-    ContentListComponent
+    ContentListComponent,
+    HoverAffectDirective
   ],
   imports: [
     BrowserModule
