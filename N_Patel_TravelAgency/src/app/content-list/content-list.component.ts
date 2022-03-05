@@ -37,7 +37,7 @@ export class ContentListComponent implements OnInit {
       id:2,
       title:'Switzerland',
       description:'7 days 6 night, Breakfast included.',
-      imgURL: 'https://www.planetware.com/photos-large/CH/switzerland-matterhorn.jpg',
+      imgURL:"" ,
       price:1450
     },
     {

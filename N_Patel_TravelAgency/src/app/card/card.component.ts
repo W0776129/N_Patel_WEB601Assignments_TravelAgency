@@ -19,4 +19,8 @@ export class CardComponent implements OnInit {
 
   }
 
+  imageClicked(): void {
+    console.log("ID: ", this.tourItem?.id, ", Title: ", this.tourItem?.title);
+  }
+
 }
