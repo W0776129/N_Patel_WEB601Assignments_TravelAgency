@@ -1,0 +1,25 @@
+<div>
+    id: <input #id>
+</div>
+<div>
+    title: <input #title>
+</div>
+<div>
+    description: <input #description>
+</div>
+<div>
+    price: <input #price>
+</div>
+
+<div>
+    image url: <input #imageUrl>
+</div>
+<div>
+    type: <input #type>
+</div>
+<div>
+    tags: <input #tags>
+</div>
+<div>
+    <button (click)="addTour(id.value, title.value, imageUrl.value, description.value, price.value ,type.value , tags.value)">Add Tour</button>
+</div>

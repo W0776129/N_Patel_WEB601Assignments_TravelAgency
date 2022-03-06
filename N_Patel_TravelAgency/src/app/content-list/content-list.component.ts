@@ -80,7 +80,53 @@ export class ContentListComponent implements OnInit {
       type: "cultural"
     },
   ];
-   }
+
+
+  let ourPromise = new Promise((success, fail) => {
+    let testPass = false;
+    if (testPass) {
+      success("Success was achieved!");
+    }
+    else {
+      fail("Failure :(");
+    }
+  });
+
+  console.log("First console log");
+
+  ourPromise
+    .then(function (successMessage) {
+      console.log("The promise succeeded and came back with the following message: ", successMessage);
+    })
+    .catch(function (failureMessage) {
+      console.log("The promise failed and came back with the following message: ", failureMessage);
+    });
+
+  console.log("Fourth console log");
+
+  let getStuff = async function () {
+    return "stuff";
+  }
+  // function async getStuffUsingOldFunctionDefinition(): string{
+  //   return "stuff";
+  // }
+  let getTheSameStuff = async function () {
+    return "Similar stuff";
+  }
+
+  //different way to represent functions
+  let getAllTheStuff = async () => {
+    const theFirstStuff = getStuff();
+    const theSecondStuff = getTheSameStuff();
+    //returns both promises
+    return await Promise.all([theFirstStuff, theSecondStuff]);
+  }
+  getAllTheStuff().then((value) => {
+    console.log("First value from the getAllTheStuff method: ", value[0]);
+    console.log("Second value from the getAllTheStuff method: ", value[1]);
+  });
+
+}
 
   ngOnInit(): void {
   }
@@ -105,6 +151,15 @@ export class ContentListComponent implements OnInit {
     }
     this.temp = false;
     
+  }
+
+  addTourToList(newTour : Tour){
+    console.log("old array values ", this.tourList);
+    this.tourList.push(newTour);
+    this.tourList = Object.assign([], this.tourList);
+    this.tourList = [...this.tourList];
+    console.log("Did the item get added? ", newTour);
+    console.log("new array values ", this.tourList);
   }
 
 }
