@@ -1,25 +1,27 @@
+<form>
 <div>
-    id: <input #id>
+    id: <input #id  type="number" placeholder="enter number only" required >
 </div>
 <div>
-    title: <input #title>
+    title: <input #title type="text" placeholder="title required" required>
 </div>
 <div>
-    description: <input #description>
+    description: <input #description placeholder="enter descrption required" required>
 </div>
 <div>
-    price: <input #price>
+    price: <input #price type="number" placeholder="enter number only" required>
 </div>
 
 <div>
-    image url: <input #imageUrl>
+    image url: <input #imageUrl placeholder="you can leave it blank">
 </div>
 <div>
-    type: <input #type>
+    type: <input #type placeholder="cultural" value="cultural"  required>
 </div>
 <div>
-    tags: <input #tags>
+    tags: <input #tags placeholder="not required (tag seprate by ,)">
 </div>
 <div>
-    <button (click)="addTour(id.value, title.value, imageUrl.value, description.value, price.value ,type.value , tags.value)">Add Tour</button>
+    <button type="submit" (click)="addTour(id.value, title.value, imageUrl.value, description.value, price.value ,type.value , tags.value)">Add Tour</button>
 </div>
+</form>

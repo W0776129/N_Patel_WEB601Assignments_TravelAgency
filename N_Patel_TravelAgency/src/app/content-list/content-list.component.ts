@@ -154,12 +154,11 @@ export class ContentListComponent implements OnInit {
   }
 
   addTourToList(newTour : Tour){
-    console.log("old array values ", this.tourList);
+ 
     this.tourList.push(newTour);
     this.tourList = Object.assign([], this.tourList);
     this.tourList = [...this.tourList];
-    console.log("Did the item get added? ", newTour);
-    console.log("new array values ", this.tourList);
+    console.log("new item added successfully.")
   }
 
 }

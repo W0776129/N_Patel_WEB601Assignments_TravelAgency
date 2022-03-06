@@ -1,4 +1,4 @@
-import { Component, OnInit, Output,EventEmitter } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter, ViewChild } from '@angular/core';
 
 import { Tour } from '../helper-files/tour-interface';
 
@@ -10,6 +10,27 @@ import { Tour } from '../helper-files/tour-interface';
 export class CreateContentComponent implements OnInit {
   @Output() newTourAdd: EventEmitter<Tour> = new EventEmitter<Tour>();
   newTour?: Tour;
+  @ViewChild('title')
+  inputTitle!: { nativeElement: { value: string; }; };
+
+  @ViewChild('id')
+  inputId!: { nativeElement: { value: string; }; };
+  
+  @ViewChild('description')
+  inputDesc!: { nativeElement: { value: string; }; };
+  
+  @ViewChild('price')
+  inputPrice!: { nativeElement: { value: string; }; };
+  
+  @ViewChild('type')
+  inputType!: { nativeElement: { value: string; }; };
+  
+  @ViewChild('tags')
+  inputTag!: { nativeElement: { value: string; }; };
+
+  @ViewChild('imageUrl')
+  inputImg!: { nativeElement: { value: string; }; };
+  
   constructor() { }
 
   ngOnInit(): void {
@@ -26,6 +47,15 @@ export class CreateContentComponent implements OnInit {
       tags : tags.split(",")
     };
     this.newTourAdd.emit(this.newTour);
+    this.inputTitle.nativeElement.value = '';
+    this.inputId.nativeElement.value = '';
+    this.inputDesc.nativeElement.value = '';
+    this.inputPrice.nativeElement.value = '';
+    
+    this.inputTag.nativeElement.value = '';
+    this.inputImg.nativeElement.value = '';
+
+    
   }  
 
 }

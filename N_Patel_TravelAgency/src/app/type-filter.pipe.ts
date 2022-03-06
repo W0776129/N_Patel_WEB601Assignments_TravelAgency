@@ -7,7 +7,7 @@ export class TypeFilterPipe implements PipeTransform {
 
   transform(tourList: Tour[], typeparameter ?: string): Tour[] {
 
-    if(typeparameter==null){
+    if(typeparameter==null || typeparameter==" "){
       return tourList.filter(t=>t.type == null );
     }
 
