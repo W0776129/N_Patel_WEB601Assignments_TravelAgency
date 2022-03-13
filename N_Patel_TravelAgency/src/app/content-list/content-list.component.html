@@ -8,8 +8,10 @@
    
 </div> -->
 
-<h3>Add Tour item</h3>
-<app-create-content (newTourAdd)="addTourToList($event)"></app-create-content>
+
+<app-card *ngIf="singleTour" [tourItem]="singleTour" [class.singleTour] = "singleTour" > </app-card>
+
+
 
 <h2>cultural Tour</h2>
 <app-card *ngFor = "let item of (tourList | typeFilter:'cultural'  ); index as i" 
