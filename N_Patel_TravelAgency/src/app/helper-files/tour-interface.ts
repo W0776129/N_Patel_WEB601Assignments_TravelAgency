@@ -1,5 +1,5 @@
 export interface Tour{
-    id: number;
+    readonly id?: number;
     title: string;
     description: string;
     price: number;

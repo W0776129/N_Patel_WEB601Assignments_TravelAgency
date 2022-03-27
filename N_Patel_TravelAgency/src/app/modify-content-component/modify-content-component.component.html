@@ -1,0 +1,27 @@
+
+<div>
+    id: <input #id  type="number" placeholder="For update only"  >
+</div>
+<div>
+    title: <input #title type="text" placeholder="title required" required>
+</div>
+<div>
+    description: <input #description placeholder="enter descrption required" required>
+</div>
+<div>
+    price: <input #price type="number" placeholder="enter number only" required>
+</div>
+
+<div>
+    image url: <input #imageUrl placeholder="you can leave it blank">
+</div>
+<div>
+    type: <input #type placeholder="cultural" value="cultural"  required>
+</div>
+<div>
+    tags: <input #tags placeholder="not required (tag seprate by ,)">
+</div>
+<div>
+    <button type="submit" (click)="addTour(title.value, imageUrl.value, description.value, price.value ,type.value , tags.value)">Add Tour</button>
+    <button type="submit" (click)="updateTour(id.value, title.value, imageUrl.value, description.value, price.value ,type.value , tags.value)">Update Tour</button>
+</div>

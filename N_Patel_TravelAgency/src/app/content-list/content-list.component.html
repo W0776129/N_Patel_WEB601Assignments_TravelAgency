@@ -8,8 +8,10 @@
    
 </div> -->
 
+<app-modify-content-component (newTourAdd)="addTourToList($event)"  (updateTourAdd)="updateTourInList($event)"></app-modify-content-component>
 
-<app-card *ngIf="singleTour" [tourItem]="singleTour" [class.singleTour] = "singleTour" > </app-card>
+
+<!-- <app-card *ngIf="singleTour" [tourItem]="singleTour" [class.singleTour] = "singleTour" > </app-card> -->
 
 
 

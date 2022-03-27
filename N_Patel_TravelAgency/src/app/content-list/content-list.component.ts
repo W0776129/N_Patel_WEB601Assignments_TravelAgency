@@ -71,16 +71,21 @@ export class ContentListComponent implements OnInit {
 }
 
   ngOnInit(): void {
-    this.tourList = this.tourService.getContent();
-
+    
+   
     // this.tourService.getContentObs().subscribe(TourList=>this.tourList = TourList);
     // this.tourService.getContentObs().subscribe(TourList=>{
     //   return this.tourList = TourList;
     // });
 
-    this.singleTour = this.tourService.getSingleItem(5);
-    console.log(this.singleTour);
+    this.getTourFromServer();
+    
+    
 
+  }
+
+  getTourFromServer(): void{
+    this.tourService.getContent().subscribe(tourArray => this.tourList = tourArray);
   }
 
   updatePage(cardNameOnTheTypescriptSide: string): void {
@@ -105,12 +110,31 @@ export class ContentListComponent implements OnInit {
     
   }
 
-  addTourToList(newTour : Tour){
+  // addTourToList(newTour : Tour){
  
-    this.tourList.push(newTour);
-    this.tourList = Object.assign([], this.tourList);
-    this.tourList = [...this.tourList];
-    console.log("new item added successfully.")
+  //   this.tourList.push(newTour);
+  //   this.tourList = Object.assign([], this.tourList);
+  //   this.tourList = [...this.tourList];
+  //   console.log("new item added successfully.")
+  // }
+
+  updateTourInList(contentItem: Tour): void {
+   
+
+    this.tourService.updateContent(contentItem).subscribe(() => {
+      console.log("Content updated successfully");
+      this.getTourFromServer();
+    });
+  }
+
+  addTourToList(newFoodFromChild: Tour): void {
+    this.tourService.addContent(newFoodFromChild).subscribe(newContentFromServer => {
+      console.log("New content from server: ", newContentFromServer);
+      
+      this.tourList.push(newContentFromServer);
+      this.tourList = [...this.tourList]; // using the spread operator
+      
+    });
   }
 
 }

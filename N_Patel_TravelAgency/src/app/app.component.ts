@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Tour } from './helper-files/tour-interface';
-import { MessageService } from './services/message.service';
+
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import { MessageService } from './services/message.service';
 export class AppComponent {
   //This parameter used for updatepage funcion
  
-  constructor(public msgService: MessageService){
+  constructor(){
     
   
     // let Swiss : Tour;
