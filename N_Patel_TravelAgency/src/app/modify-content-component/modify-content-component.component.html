@@ -1,27 +1,54 @@
+<h2 mat-dialog-title>Add-Update Content</h2>
+<mat-dialog-content class="mat-typography">
+<mat-form-field>
+<div>
+    <mat-label>ID (ONLY FOR UDPATING)</mat-label>
+    <input matInput #id  type="number" placeholder="For update only"  >
+</div>
+</mat-form-field>
+<mat-form-field>
+<div>
+    <mat-label>Title</mat-label>
+     <input matInput #title type="text" placeholder="title required" required>
+</div>
+</mat-form-field>
+<mat-form-field>
+<div>
+    <mat-label>description</mat-label>
+     <input matInput #description placeholder="enter descrption required" required>
+</div>
+</mat-form-field>
+<mat-form-field>
+<div>
+    <mat-label>price</mat-label>
+    <input matInput #price type="number" placeholder="enter number only" required>
+</div>
+</mat-form-field>
+<mat-form-field>
+<div>
+    <mat-label>image url</mat-label>
+     <input matInput #imageUrl placeholder="you can leave it blank">
+</div>
 
+</mat-form-field>
+<mat-form-field>
 <div>
-    id: <input #id  type="number" placeholder="For update only"  >
+    <mat-label>Title</mat-label>
+     <input matInput #type placeholder="cultural" value="cultural"  required>
 </div>
+</mat-form-field>
+<mat-form-field>
 <div>
-    title: <input #title type="text" placeholder="title required" required>
+    <mat-label>tags</mat-label>
+     <input matInput #tags placeholder="not required (tag seprate by ,)">
 </div>
+</mat-form-field>
 <div>
-    description: <input #description placeholder="enter descrption required" required>
+    <button mat-raised-button type="submit" (click)="addTour(title.value, imageUrl.value, description.value, price.value ,type.value , tags.value)">Add Tour</button>
+    <button mat-raised-button type="submit" (click)="updateTour(id.value, title.value, imageUrl.value, description.value, price.value ,type.value , tags.value)">Update Tour</button>
 </div>
-<div>
-    price: <input #price type="number" placeholder="enter number only" required>
-</div>
-
-<div>
-    image url: <input #imageUrl placeholder="you can leave it blank">
-</div>
-<div>
-    type: <input #type placeholder="cultural" value="cultural"  required>
-</div>
-<div>
-    tags: <input #tags placeholder="not required (tag seprate by ,)">
-</div>
-<div>
-    <button type="submit" (click)="addTour(title.value, imageUrl.value, description.value, price.value ,type.value , tags.value)">Add Tour</button>
-    <button type="submit" (click)="updateTour(id.value, title.value, imageUrl.value, description.value, price.value ,type.value , tags.value)">Update Tour</button>
-</div>
+</mat-dialog-content>
+<mat-dialog-actions >
+    <button mat-button mat-dialog-close>Cancel</button>
+    
+  </mat-dialog-actions>

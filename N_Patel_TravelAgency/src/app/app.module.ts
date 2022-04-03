@@ -14,7 +14,12 @@ import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from "./services/in-memory-data.service";
 import { ModifyContentComponentComponent } from './modify-content-component/modify-content-component.component';
 import { MessagesComponent } from './messages/messages.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from
+'@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatDialog} from '@angular/material/dialog';
+import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,15 +32,21 @@ import { MessagesComponent } from './messages/messages.component';
     CreateContentComponent,
     ModifyContentComponentComponent,
     MessagesComponent,
+    DialogExampleComponent,
   
   ],
+  entryComponents:[DialogExampleComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false,
       delay: 500
-    })
+    }),
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatInputModule,
+    MatDialog
   ],
   providers: [],
   bootstrap: [AppComponent]

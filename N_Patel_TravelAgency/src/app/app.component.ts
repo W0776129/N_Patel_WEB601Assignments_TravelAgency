@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Tour } from './helper-files/tour-interface';
-
+import { MatDialog } from '@angular/material/dialog';
+import { ModifyContentComponentComponent } from './modify-content-component/modify-content-component.component';
+import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 
 @Component({
   selector: 'app-root',
@@ -10,26 +12,13 @@ import { Tour } from './helper-files/tour-interface';
 export class AppComponent {
   //This parameter used for updatepage funcion
  
-  constructor(){
-    
+  constructor( public dialog: MatDialog){
   
-    // let Swiss : Tour;
-    // Swiss={
-    //   id: 2,
-    //   title: "Switzerland",
-    //   description: "fdggfhgjhgg",
-    //   creator: "dfa",
-    //   imgURL: "afadfaf",
-    // };
-    // this.consoleTour(Swiss);
-    // this.AllTours = new TourList(Swiss);
-    // console.log(this.AllTours.items);
-
   }
-  // consoleTour(tour: Tour):string{
-  //   console.log(tour.title);
-  //   return tour.title;
-  // }
+ 
+  openDialog(){
+    this.dialog.open(ModifyContentComponentComponent);
+  }
 
   
 }
