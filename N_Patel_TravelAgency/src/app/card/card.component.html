@@ -1,14 +1,13 @@
 
 <div class="card">
 <div class="title">{{ tourItem ? tourItem.title : "" }}</div><br>
-<div class="desc">{{ tourItem ? tourItem.description : "" }}</div><br>
+
 
 <img (click)="imageClicked()" *ngIf="tourItem?.imgURL" class="image" [src]="tourItem?.imgURL">
 <img (click)="imageClicked()" *ngIf="!tourItem?.imgURL" class="image"
     src="https://freepikpsd.com/file/2020/04/bahama-breeze-logo-png-Transparent-Images.png"> <!-- default image -->
 
-<div class="price"  >CA${{ tourItem ? tourItem.price : "" }}</div><br>
-<div class="type" appHoverAffect = "underline">{{ tourItem ? tourItem.type : "" }}</div><br>
+
 
 <div class="tags" *ngIf="tourItem?.tags">
     <span appHoverAffect ="tagbold" class="tag" *ngFor="let tag of tourItem?.tags">
@@ -16,6 +15,11 @@
     </span>
 </div>
 <br>
+<div>
+    <a [routerLink]="['/tour', tourItem?.id ?? 0]" routerLinkActive="active">
+        tour Details
+      </a>
+</div>
 <!-- <div class="name">{{ tourItem ? tourItem.name : "" }}</div> -->
 
 </div>

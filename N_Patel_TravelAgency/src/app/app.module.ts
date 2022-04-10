@@ -14,7 +14,9 @@ import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from "./services/in-memory-data.service";
 import { ModifyContentComponentComponent } from './modify-content-component/modify-content-component.component';
 import { MessagesComponent } from './messages/messages.component';
-
+import { AppRoutingModule } from './app-routing.module';
+import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,10 +29,13 @@ import { MessagesComponent } from './messages/messages.component';
     CreateContentComponent,
     ModifyContentComponentComponent,
     MessagesComponent,
+    ContentDetailComponent,
+    PageNotFoundComponent,
   
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false,

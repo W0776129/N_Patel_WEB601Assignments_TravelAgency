@@ -1,0 +1,53 @@
+:host{
+    
+    .card{
+    border: 1px solid black;
+    width: 400px;
+   
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    }
+    .title{
+        font-size: large;
+        color: blueviolet;
+
+    }
+    .price{
+        color: yellowgreen;
+    }
+    img{
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+    }
+    .underline{
+        color: black;
+        text-decoration: underline;
+    }
+    .tagbold{
+        font-weight: bold;
+    }
+}
+:host.is-first{
+    .card{
+    border: 5px solid black ;
+    }
+}
+:host.cultural{
+    .card{
+        border: 5px solid orange ;
+    }
+}
+:host.honey{
+    .card{
+        border: 5px solid green ;
+    }
+}
+:host.singleTour{
+    .card{
+        border: 5px solid grey;
+        box-shadow: 5px 10px lightgrey;
+    }
+}
