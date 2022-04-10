@@ -11,7 +11,7 @@ const routes: Routes = [
     component: ContentListComponent
   },
   {
-    path:"tour/id",
+    path:"tour/:id",
     component: ContentDetailComponent
   },
   {

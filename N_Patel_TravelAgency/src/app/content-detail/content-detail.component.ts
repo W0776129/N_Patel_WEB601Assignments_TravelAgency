@@ -11,16 +11,16 @@ import { TourServiceService } from '../services/tour-service.service';
 export class ContentDetailComponent implements OnInit {
 
   id?:number;
-  tourItem?:Tour;
+  tItem?:Tour;
 
   constructor(private route: ActivatedRoute,private tourService: TourServiceService) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params =>{
-      this.id=Number(params.get('id')??"0");
+      this.id=Number(params.get('id') ?? "0");
       this.tourService.getContentItem(this.id).subscribe(
         (c)=>{
-          this.tourItem = c;
+          this.tItem = c;
         }
       );
     });
