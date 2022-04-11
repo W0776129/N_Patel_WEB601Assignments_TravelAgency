@@ -27,7 +27,7 @@ export class TourServiceService {
     }
     
     getContentItem(id: number): Observable<Tour>{
-      console.log("Retrieving OBSERVABLE content item");
+      this.msgService.add("Retrieving OBSERVABLE content item");
       return this.http.get<Tour>("api/tour/" + id);
     }
 
