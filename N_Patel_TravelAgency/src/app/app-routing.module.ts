@@ -4,25 +4,26 @@ import { ContentListComponent } from './content-list/content-list.component';
 import { RouterModule,Routes } from '@angular/router';
 import { ContentDetailComponent } from './content-detail/content-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {
     path:"",
-    component: ContentListComponent
+    redirectTo:"/content",
+    pathMatch:"full",
   },
   {
-    path:"tour/:id",
-    component: ContentDetailComponent
+    path:"content",
+    component: ContentListComponent,
   },
   {
-    path:"tour",
-    component:ContentListComponent
+    path:"content/:id",
+    component: ContentDetailComponent,
   },
   {
     path:"**",
-    component: PageNotFoundComponent
+    component: PageNotFoundComponent,
   }
-  
 ];
 
 @NgModule({

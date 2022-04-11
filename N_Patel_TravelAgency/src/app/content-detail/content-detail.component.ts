@@ -21,6 +21,7 @@ export class ContentDetailComponent implements OnInit {
       this.tourService.getContentItem(this.id).subscribe(
         (c)=>{
           this.tItem = c;
+          console.log("sdfsdvs");
         }
       );
     });
