@@ -20,6 +20,7 @@ const routes: Routes = [
     path:"content/:id",
     component: ContentDetailComponent,
   },
+  { path: 'content', loadChildren: () => import('./content/content.module').then(m => m.ContentModule) },
   {
     path:"**",
     component: PageNotFoundComponent,
